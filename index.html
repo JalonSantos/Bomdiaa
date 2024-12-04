@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bom Diaaaaa!</title>
+    <title>Bom Diaaaa!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -112,10 +112,19 @@
         }
     </style>
 </head>
-<audio id="background-music" loop>
+<body>
+    <audio id="background-music" loop>
         <source src="Mariah Carey - All I Want for Christmas Is You (Make My Wish Come True Edition).mp3" type="audio/mp3">
         Seu navegador não suporta áudio.
     </audio>
+    
+    
+    
+    <script>
+        function playMusic() {
+            document.getElementById('background-music').play();
+        }
+    </script>
 
     <div id="screen1" class="screen active">
         <h1>Bom Dia, Princesa!</h1>
@@ -262,6 +271,8 @@
             currentScreen.classList.remove('active');
             nextScreen.classList.add('active');
         }
+
+        
     </script>
 </body>
 </html>
