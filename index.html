@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom Dia, Amor!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #000, #2a2a2a);
+            color: hotpink;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1, h2 {
+            font-size: 2.5em;
+            margin: 0.5em 0;
+        }
+
+        .screen {
+            display: none;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        .highlight {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 
+                0 0 5px #ff69b4,    /* Pink glow */
+                0 0 10px #ff69b4,   /* Pink glow */
+                0 0 15px #ff69b4,   /* Pink glow */
+                0 0 20px #ff1493,   /* Darker pink glow */
+                0 0 30px #ff1493,   /* Darker pink glow */
+                0 0 40px #ff1493;   /* Strong pink glow */
+            animation: neonBlink 1.5s infinite alternate;
+        }
+
+        @keyframes neonBlink {
+            0% {
+                text-shadow: 
+                    0 0 5px #ff69b4, 
+                    0 0 10px #ff69b4, 
+                    0 0 15px #ff69b4, 
+                    0 0 20px #ff1493, 
+                    0 0 30px #ff1493, 
+                    0 0 40px #ff1493;
+            }
+            100% {
+                text-shadow: 
+                    0 0 10px #ff69b4, 
+                    0 0 20px #ff69b4, 
+                    0 0 30px #ff69b4, 
+                    0 0 40px #ff1493, 
+                    0 0 50px #ff1493, 
+                    0 0 60px #ff1493;
+            }
+        }
+
+        .next-btn {
+            background-color: hotpink;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .heart-icon {
+            font-size: 2em;
+            margin-left: 10px;
+        }
+
+        .particle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: -1;
+        }
+
+        ul.list {
+            text-align: left;
+            margin-top: 20px;
+            list-style-type: decimal;
+        }
+
+        ul.list li {
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="Mariah Carey - All I Want for Christmas Is You (Make My Wish Come True Edition).mp3" type="audio/mp3">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <div id="screen1" class="screen active">
+        <h1>Bom Dia, Princesa!</h1>
+        <button class="next-btn" onclick="showNextScreen(2)">Próximo</button>
+    </div>
+
+    <div id="screen2" class="screen">
+        <h2>Quero te dizer algo...</h2>
+        <button class="next-btn" onclick="showNextScreen(3)">Próximo</button>
+    </div>
+
+    <div id="screen3" class="screen">
+        <h2>2 coisas que mais amo em você</h2>
+        <button class="next-btn" onclick="showNextScreen(4)">Próximo</button>
+    </div>
+
+    <div id="screen4" class="screen">
+        <h2>1. Seus olhos</h2>
+        <button class="next-btn" onclick="showNextScreen(5)">Próximo</button>
+    </div>
+
+    <div id="screen5" class="screen">
+        <h2>Achou que era só 2? Kkkk</h2>
+        <button class="next-btn" onclick="showNextScreen(6)">Próximo</button>
+    </div>
+
+    <!-- Lista Parte 1 -->
+    <div id="screen6" class="screen">
+        <h2>Agora, a lista completa (Parte 1):</h2>
+        <ul class="list">
+            <li>2. Seu caráter</li>
+<li>3. Você</li>
+<li>4. Seu nome</li>
+<li>5. Sua personalidade</li>
+<li>6. Sua risada</li>
+<li>7. Sua voz</li>
+<li>8. Seu abraço</li>
+<li>9. Sua alegria</li>
+<li>10. Sua gentileza</li>
+<li>11. Seu carinho</li>
+<li>12. Nossa amizade</li>
+<li>13. Sua beleza</li>
+<li>14. Suas mensagens</li>
+<li>15. Seu estilo</li>
+<li>16. O tempo que passamos juntos</li>
+<li>17. As memórias que criamos</li>
+<li>18. Assistir aos vídeos que você me manda</li>
+<li>19. Como posso confiar em você</li>
+<li>20. A sua sinceridade</li><li>21. Sua paciência</li>
+<li>21. Sua paciência</li>
+<li>22. Como você me apoia</li>
+<li>23. Seu jeito de cuidar de tudo</li>
+<li>24. A sua coragem</li>
+        </ul>
+        <button class="next-btn" onclick="showNextScreen(7)">Próximo</button>
+    </div>
+
+    <!-- Lista Parte 2 -->
+    <div id="screen7" class="screen">
+        <h2>Lista completa (Parte 2):</h2>
+        <ul class="list">
+            
+            <li>25. O seu jeito aleatório de ser (isso me diverte muito kkk)</li>
+            <li>26. Seu temor a Cristo</li>
+            <li>27. Seu talento como "modo manicure" (arrasa demais nisso)</li>
+            <li>28. Jogar (e estressar) no LoL kkk</li>
+            <li>29. Seu senso de humor único que me faz rir</li>
+            <li>30. Sua força, você é muito forte (uma Princesa forte)</li>
+            <li>31. Sua bravura</li>
+            <li>32. Sua inteligência</li>
+            <li>33. Sua criatividade</li>
+            <li>34. Sua paciência</li>
+            <li>35. Seu respeito pelos outros</li>
+            <li>36. Sua positividade</li>
+            <li>37. Sua confiança</li>
+            <li>38. Sua habilidade de dar conselhos</li>
+            <li>39. O jeito que você traz alegria para os outros</li>
+            <li>40. Como você nunca desiste dos seus sonhos</li><li>32. Sua inteligência</li>
+            <li>33. Sua criatividade</li>
+            <li>34. Sua paciência</li>
+            <li>35. Seu respeito pelos outros</li>
+        </ul>
+        <button class="next-btn" onclick="showNextScreen(8)">Próximo</button>
+    </div>
+
+    <!-- Lista Parte 3 -->
+    <div id="screen8" class="screen">
+        <h2>Lista completa (Parte 3):</h2>
+        <ul class="list">
+            <li>31. Sua bravura</li>
+
+<li>36. Sua positividade</li>
+<li>37. Sua confiança</li>
+<li>38. Sua habilidade de dar conselhos</li>
+<li>39. O jeito que você traz alegria para os outros</li>
+<li>40. Como você nunca desiste dos seus sonhos</li>
+<li>41. Seu jeito meigo e acolhedor</li>
+            <li>41. Seu jeito meigo e acolhedor</li>
+            <li>42. Como você consegue fazer qualquer um sorrir</li>
+            <li>43. A energia boa que você passa</li>
+            <li>44. Seu sorriso sincero</li>
+            <li>45. O fato de você estar sempre presente, mesmo de longe</li>
+            <li>46. Como você se cuida</li>
+        </ul>
+        <button class="next-btn" onclick="showNextScreen(9)">Próximo</button>
+    </div>
+
+    <!-- Lista Parte 4 -->
+    <div id="screen9" class="screen">
+        <h2>Lista completa (Parte 4):</h2>
+        <ul class="list">
+            
+            <li>47. O amor que você coloca em tudo</li>
+            <li>48. O jeito como você valoriza cada momento</li>
+            <li>49. Sua determinação</li>
+            <li>50. Sua honestidade</li>
+            <li>51. Como você sempre encontra uma solução</li>
+            <li>52. Sua doçura</li>
+<li>53. Sua sinceridade em tudo</li>
+<li>54. Seu jeito de se importar com os outros</li>
+<li>55. O seu brilho próprio</li>
+<li>56. Como você sempre está disposta a ajudar</li>
+<li>57. Como você se destaca em tudo o que faz</li>
+<li>58. A leveza com que você leva a vida</li>
+<li>59. Amo a sua vida por completo, cada detalhe.</li>
+        </ul>
+        <button class="next-btn" onclick="showNextScreen(10)">Próximo</button>
+    </div>
+
+    <div id="screen10" class="screen">
+        <h2 class="highlight">Amo a sua vida por completo, cada detalhe</h2>
+        <button class="next-btn" onclick="showNextScreen(11)">Próximo</button>
+    </div>
+
+    <div id="screen11" class="screen">
+        <h2>Te amo mais do que palavras podem expressar!</h2>
+    </div>
+
+    <script>
+        function showNextScreen(screenNumber) {
+            let currentScreen = document.querySelector('.screen.active');
+            let nextScreen = document.getElementById('screen' + screenNumber);
+
+            currentScreen.classList.remove('active');
+            nextScreen.classList.add('active');
+        }
+    </script>
+</body>
+</html>
